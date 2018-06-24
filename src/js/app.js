@@ -24,7 +24,7 @@ function displayZombies(ids) {
     // Look up zombie details from our contract. Returns a `zombie` object
     getZombieDetails(id.toNumber())
     .then(function(zombie) {
-
+      console.log(zombie[2]);
       // Using ES6's "template literals" to inject variables into the HTML.
       // Append each one to our #zombies div
       $("#zombies").append(`<div class="zombie">
@@ -126,6 +126,6 @@ window.addEventListener('load', function() {
   startApp();
 
   $('#createRandomZombie').on('click',function(){
-    createRandomZombie("RandomZombie" + Math.floor((Math.random() * 666) + 1));
+    createRandomZombie("Jelo Zombie #" + Math.floor((Math.random() * 666) + 1));
   });
 });
