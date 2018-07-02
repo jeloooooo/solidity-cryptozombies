@@ -13,8 +13,9 @@
 npm install -g truffle
 npm install
 truffle compile
-truffle migrate [TO DO]
-npm run dev [TO DO]
+truffle migrate 
+truffle test [TO DO: Add additional tests .sol/.js]
+npm run dev 
 ```
 
 ### Additional Resources

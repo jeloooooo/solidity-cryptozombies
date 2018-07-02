@@ -39,11 +39,12 @@ contract ZombieFactory is Ownable {
     return rand % dnaModulus;
   }
 
-  function createRandomZombie(string _name) public {
+  function createRandomZombie(string _name) public returns(bool) {
     require(ownerZombieCount[msg.sender] == 0);
     uint randDna = _generateRandomDna(_name);
     randDna = randDna - randDna % 100;
     _createZombie(_name, randDna);
+    return true;
   }
 
 }
